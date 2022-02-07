@@ -2,12 +2,14 @@
   <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
     aria-haspopup="true" aria-expanded="false">
     <div class="text-center">
-      <div><i class="fas fa-search fa-lg"></i></div>
+      <div>
+        <i class="fas fa-search fa-lg"></i>
+      </div>
       <p class="my-0">Search</p>
     </div>
   </a>
   <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-    <form class="form" method="GET" action="">
+    <form class="form" method="GET" action="{% url 'products' %}">
       <div class="input-group w-100">
         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
         <div class="input-group-append">
@@ -25,7 +27,9 @@
   <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
     aria-haspopup="true" aria-expanded="false">
     <div class="text-center">
-      <div><i class="fas fa-user fa-lg"></i></div>
+      <div>
+        <i class="fas fa-user fa-lg"></i>
+      </div>
       <p class="my-0">My Account</p>
     </div>
   </a>
@@ -46,7 +50,9 @@
   <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
     href="">
     <div class="text-center">
-      <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+      <div>
+        <i class="fas fa-shopping-bag fa-lg"></i>
+      </div>
       <p class="my-0">
         {% if grand_total %}
         ${{ grand_total|floatformat:2 }}
