@@ -111,3 +111,14 @@ input[name='q']::placeholder {
     padding-top: 164px;
   }
 }
+
+/* control the top f the containers, reduce overlay by navbar */
+@media (max-width: 991px) {
+  .header-container {
+    padding-top: 116px;
+  }
+
+  body {
+    height: calc(100vh - 116px);
+  }
+}
