@@ -1,9 +1,12 @@
+"""Form fot the checkout page."""
 from django import forms
 from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """OrderForm is a ModelForm that inherits from the Django ModelForm class."""
     class Meta:
+        """Meta class to set model to Order."""
         model = Order
         fields = ('full_name', 'email', 'phone_number',
                   'street_address1', 'street_address2',
