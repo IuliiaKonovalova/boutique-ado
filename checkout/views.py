@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.config import settings
 
 from .forms import OrderForm
 from bag.contexts import bag_contents
 
+import stripe
 
 def checkout(request):
     bag = request.session.get('bag', {})
